@@ -3,14 +3,17 @@
 $script = <<SCRIPT
 yum install -y java-1.8.0-openjdk.x86_64
 echo "PATH=$PATH:/vagrant" >> /home/vagrant/.bashrc
+mkdir -p /home/vagrant/__files && cp /vagrant/basic.json /home/vagrant/__files/special-offers.json
 sh /vagrant/wiremock.sh
+sleep 10
+sh /vagrant/basic-offer-response.sh
 SCRIPT
 
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  name = "node1"
+  name = "wiremock"
 
   config.vm.define name do |host|
     host.vm.hostname = name
