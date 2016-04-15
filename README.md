@@ -14,7 +14,7 @@ vagrant up
 Run Ui Services:
 ```
 mvn clean install
-java -jar target/devcon-fallacies-1.0-SNAPSHOT.jar server config.yml
+java -jar target/devcon-fallacies-1.0-SNAPSHOT.jar server config.yaml
 ```
 
 ## HowTo Test
@@ -46,7 +46,7 @@ vagrant up
 Restart the UI Service with the BreakerBox configuration:
 
 ```
-java -jar target/devcon-fallacies-1.0-SNAPSHOT.jar server breaker-box-config.yml
+java -jar target/devcon-fallacies-1.0-SNAPSHOT.jar server breaker-box-config.yaml
 ```
 
 
