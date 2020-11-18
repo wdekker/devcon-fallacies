@@ -6,7 +6,7 @@ echo "PATH=$PATH:/vagrant" >> /home/vagrant/.bashrc
 mkdir -p /home/vagrant/__files && cp /vagrant/basic.json /home/vagrant/__files/special-offers.json
 sh /vagrant/wiremock.sh
 sleep 10
-sh /vagrant/basic-offer-response.sh
+sh /vagrant/setBasicOfferResponse.sh
 SCRIPT
 
 VAGRANTFILE_API_VERSION = "2"
